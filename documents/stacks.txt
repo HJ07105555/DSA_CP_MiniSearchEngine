@@ -1,0 +1,182 @@
+Stacks and Stack Data Structures
+
+A stack is a linear data structure in which insertion and deletion are performed from the same end. The end from which elements are inserted and removed is called the top.
+
+A stack follows the Last In First Out principle, commonly abbreviated as LIFO. This means that the element inserted most recently is the first element to be removed.
+
+For example, if the elements are inserted in the following order:
+
+10 -> 20 -> 30
+
+Then 30 will be removed first, followed by 20 and then 10.
+
+Basic Stack Operations
+
+The main operations performed on a stack are push, pop, peek, and isEmpty.
+
+Push adds an element to the top of the stack.
+
+Pop removes the element from the top of the stack.
+
+Peek or top returns the element currently at the top without removing it.
+
+isEmpty checks whether the stack contains any elements.
+
+When a stack is implemented correctly, push and pop can generally be performed in O(1) time.
+
+Array Implementation of Stack
+
+A stack can be implemented using an array. A variable called top can be used to keep track of the position of the top element.
+
+Initially, the stack is empty and top can be set to a value indicating that no element is present.
+
+During a push operation, top is increased and the new element is stored at that position.
+
+During a pop operation, the element at the top position is removed and top is decreased.
+
+Stack Overflow and Underflow
+
+Stack overflow occurs when an attempt is made to push an element into a full fixed-size stack.
+
+Stack underflow occurs when an attempt is made to remove an element from an empty stack.
+
+Linked Stack
+
+A stack can also be implemented using a linked list.
+
+In a linked stack, the top of the stack can be represented by the head pointer of the linked list.
+
+Insertion and deletion at the head of the linked list correspond to push and pop operations.
+
+Expression Evaluation
+
+Stacks are commonly used for evaluating arithmetic expressions.
+
+Expressions can be represented using different notations such as infix, prefix, and postfix notation.
+
+Infix notation places the operator between operands.
+
+Example:
+
+A + B
+
+Prefix notation places the operator before its operands.
+
+Example:
+
++ A B
+
+Postfix notation places the operator after its operands.
+
+Example:
+
+A B +
+
+Postfix Expression Evaluation
+
+A stack can be used to evaluate postfix expressions.
+
+When an operand is encountered, it is pushed onto the stack.
+
+When an operator is encountered, the required operands are removed from the stack, the operation is performed, and the result is pushed back onto the stack.
+
+After processing the complete expression, the final value remaining on the stack is the result.
+
+Infix to Postfix Conversion
+
+A stack can be used to convert an infix expression into postfix notation.
+
+Operators are temporarily stored in the stack while operands are placed into the output according to operator precedence and associativity.
+
+For example:
+
+A + B * C
+
+can be represented in postfix form as:
+
+A B C * +
+
+Polish Notation
+
+Prefix notation is also known as Polish notation.
+
+In prefix notation, the operator appears before the operands.
+
+For example:
+
+A + B
+
+becomes:
+
++ A B
+
+Reverse Polish Notation
+
+Postfix notation is also known as Reverse Polish notation.
+
+In postfix notation, the operator appears after the operands.
+
+For example:
+
+A + B
+
+becomes:
+
+A B +
+
+Multiple Stacks
+
+Multiple stacks can be maintained within the same array or memory structure.
+
+One approach is to divide the available array space between different stacks.
+
+Another approach is to allow stacks to grow toward each other so that available memory can be utilized more efficiently.
+
+Recursion and Stack
+
+Recursion is closely related to stacks.
+
+When a function calls itself, information about the current function call is stored in the call stack.
+
+When the recursive function returns, the stored function-call information is removed from the stack.
+
+Therefore, understanding stacks is important for understanding recursive algorithms.
+
+Backtracking and Stack
+
+Stacks can also be used in backtracking algorithms.
+
+In backtracking, previous states or choices can be stored so that the algorithm can return to an earlier state when the current choice does not lead to a valid solution.
+
+Applications of Stacks
+
+Stacks are used in many areas of computer science.
+
+Common applications include:
+
+Expression evaluation
+Expression conversion
+Function call management
+Recursion
+Undo operations
+Backtracking
+Depth-first search
+Parentheses matching
+
+Advantages of Stacks
+
+Stacks provide simple and efficient insertion and deletion from one end.
+
+Push and pop operations can be performed in constant time when the stack is implemented appropriately.
+
+Limitations of Stacks
+
+A fixed-size array implementation has a limited capacity.
+
+Elements in the middle of a stack cannot normally be accessed directly as part of the standard stack abstraction.
+
+Stacks in Data Structures
+
+Stacks are fundamental data structures used in algorithms and programming systems.
+
+They demonstrate the LIFO principle and provide an important foundation for expression processing, recursion, backtracking, and other algorithms.
