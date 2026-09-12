@@ -1,0 +1,189 @@
+Operating Systems and Operating System Concepts
+
+An operating system is system software that manages computer hardware and provides services for application programs.
+
+The operating system acts as an interface between users, applications, and computer hardware.
+
+Common responsibilities of an operating system include process management, memory management, file management, device management, and resource allocation.
+
+Processes
+
+A process is a program that is currently being executed.
+
+A process has its own execution state and requires resources such as memory and processor time.
+
+An operating system manages processes and determines how processor resources are allocated among them.
+
+Process States
+
+A process can move through different states during its lifetime.
+
+Common process states include:
+
+New
+Ready
+Running
+Waiting
+Terminated
+
+A process in the ready state is waiting to be assigned processor time.
+
+A running process is currently being executed by the processor.
+
+A waiting process is waiting for an event or resource before it can continue.
+
+CPU Scheduling
+
+CPU scheduling determines which ready process should receive processor time.
+
+Common CPU scheduling algorithms include:
+
+First Come First Served
+Shortest Job First
+Priority Scheduling
+Round Robin
+
+First Come First Served processes tasks according to their arrival order.
+
+Shortest Job First selects a process with the shortest expected execution time.
+
+Priority scheduling selects processes according to their assigned priority.
+
+Round Robin assigns each process a fixed time interval called a time quantum and cycles through the ready processes.
+
+Queues in Operating Systems
+
+Queues are important in operating system process scheduling.
+
+Processes waiting for processor time can be maintained in a ready queue.
+
+The operating system can remove a process from the front or according to a scheduling policy and allow it to execute.
+
+Priority queues can be used when processes need to be selected according to priority.
+
+Memory Management
+
+Memory management is the process of controlling and coordinating the use of main memory.
+
+The operating system allocates memory to processes and keeps track of which memory regions are available and which are being used.
+
+Virtual Memory
+
+Virtual memory allows a system to use secondary storage as an extension of main memory.
+
+It enables programs to operate even when the complete program or dataset cannot fit into physical memory at the same time.
+
+Paging
+
+Paging divides memory into fixed-size blocks.
+
+Logical memory is divided into pages, while physical memory is divided into frames.
+
+Pages can be loaded into available frames as required.
+
+Page Replacement
+
+When physical memory is full and a new page needs to be loaded, the operating system may need to replace an existing page.
+
+Page replacement algorithms determine which page should be removed.
+
+Examples include:
+
+FIFO
+LRU
+Optimal Page Replacement
+
+FIFO replaces the page that has been present for the longest time.
+
+LRU replaces the page that has not been used for the longest period of time.
+
+The optimal strategy attempts to replace the page that will not be needed for the longest time in the future.
+
+Stacks and Operating Systems
+
+Stacks are important in program execution.
+
+When functions are called, information about function calls can be stored on the call stack.
+
+The call stack contains information such as local variables, parameters, and return information depending on the implementation and calling convention.
+
+Recursive functions use the call stack to keep track of nested function calls.
+
+Files and File Systems
+
+An operating system provides a file system for organizing and managing files stored on storage devices.
+
+Files can contain programs, documents, images, configuration information, and other types of data.
+
+Directories or folders are used to organize files into hierarchical structures.
+
+File Operations
+
+Common file operations include:
+
+Create
+Open
+Read
+Write
+Close
+Delete
+
+The operating system provides mechanisms through which applications can perform these operations.
+
+File Searching
+
+Searching for a file may involve examining directory structures and file metadata.
+
+Efficient indexing structures can help systems locate information more quickly.
+
+Data Structures in Operating Systems
+
+Operating systems make extensive use of data structures.
+
+Queues can be used for scheduling and waiting processes.
+
+Stacks are used for function calls and execution management.
+
+Linked lists can be used to maintain collections of dynamically changing resources.
+
+Trees can represent hierarchical file systems and other structures.
+
+Hash tables can support fast lookup operations in suitable situations.
+
+Priority queues can help manage tasks according to priority.
+
+Operating Systems and Algorithms
+
+Operating systems rely on algorithms for scheduling, memory allocation, page replacement, synchronization, and resource management.
+
+The efficiency of these algorithms can affect overall system performance.
+
+For example, different CPU scheduling algorithms can produce different waiting times and response times.
+
+Operating Systems and Searching
+
+Searching is required in many operating system operations.
+
+The system may need to locate files, processes, memory regions, or other resources.
+
+The appropriate searching technique depends on how the data is organized.
+
+Operating Systems and the Mini Search Engine
+
+The mini search engine uses concepts that are also relevant to operating systems.
+
+The program reads documents from the local file system.
+
+It processes the contents of those files and builds data structures that support efficient searching.
+
+The search engine also uses queues or priority-based structures when appropriate for processing and ranking results.
+
+However, the mini search engine is not an operating system.
+
+It is a C++ DSA project that uses a controlled collection of text documents to demonstrate searching, indexing, ranking, and related data structures.
+
+Operating Systems in Computer Science
+
+Operating systems provide the foundation for running programs and managing computer resources.
+
+Understanding processes, scheduling, memory management, file systems, queues, stacks, and resource management provides a foundation for understanding how computer systems execute and manage programs.
