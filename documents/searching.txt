@@ -1,0 +1,184 @@
+Searching Algorithms
+
+Searching is the process of finding a particular element, value, or piece of information from a collection of data.
+
+Searching is one of the fundamental operations performed on data structures. The choice of searching algorithm depends on the organization of the data and the operations required.
+
+Sequential Search
+
+Sequential search is also called linear search.
+
+In sequential search, elements are examined one after another from the beginning of the collection until the required element is found or the collection is exhausted.
+
+For an array:
+
+10 25 30 45 60
+
+To search for 45, the algorithm compares the target with 10, then 25, then 30, and finally 45.
+
+The best-case time complexity of linear search is O(1) when the required element is found at the first position.
+
+The worst-case time complexity is O(n) when the element is at the last position or is not present.
+
+Linear search can be used on both sorted and unsorted data.
+
+Sentinel Search
+
+Sentinel search is a variation of linear search.
+
+In sentinel search, the target element is temporarily placed at the end of the collection. This can reduce the number of boundary checks performed during the search.
+
+The algorithm continues comparing elements until the target is encountered.
+
+After the search, the original last element can be restored if necessary.
+
+Sentinel search still has a worst-case time complexity of O(n).
+
+Binary Search
+
+Binary search is an efficient searching algorithm that works on sorted data.
+
+Instead of examining every element, binary search repeatedly divides the search interval into two parts.
+
+The middle element is compared with the target value.
+
+If the target is equal to the middle element, the search is successful.
+
+If the target is smaller than the middle element, the search continues in the left half.
+
+If the target is larger than the middle element, the search continues in the right half.
+
+For example, consider the sorted array:
+
+10 20 30 40 50 60 70
+
+To search for 60, the algorithm first examines the middle element. Based on the comparison, it eliminates the half that cannot contain the target.
+
+The process continues until the target is found or the search interval becomes empty.
+
+The worst-case time complexity of binary search is O(log n).
+
+The main requirement of binary search is that the data must be appropriately ordered.
+
+Iterative Binary Search
+
+An iterative binary search implementation uses a loop to repeatedly update the lower and upper boundaries of the search interval.
+
+It does not require recursive function calls.
+
+The variables low, high, and mid are commonly used to represent the search interval and its middle position.
+
+Recursive Binary Search
+
+Binary search can also be implemented recursively.
+
+The function calls itself on either the left half or the right half of the search interval.
+
+Each recursive call reduces the size of the problem.
+
+The number of recursive levels is logarithmic with respect to the number of elements.
+
+Fibonacci Search
+
+Fibonacci search is a searching algorithm that uses Fibonacci numbers to divide a sorted array into sections.
+
+Instead of using the middle position as in binary search, Fibonacci search uses Fibonacci numbers to determine the positions used for comparison.
+
+Fibonacci search works on sorted data.
+
+Its search behavior is logarithmic, making it suitable for searching large sorted collections.
+
+Indexed Sequential Search
+
+Indexed sequential search combines indexing with sequential searching.
+
+An index is created to identify groups or sections of records.
+
+The index is first searched to determine the appropriate section.
+
+A sequential search is then performed within that section.
+
+This approach can reduce the amount of data that must be examined compared with a simple sequential search.
+
+Searching Sorted and Unsorted Data
+
+The organization of the data strongly affects the choice of searching algorithm.
+
+Linear search can work with unsorted data.
+
+Binary search, Fibonacci search, and indexed sequential methods generally benefit from or require ordered data.
+
+When data is frequently searched, maintaining an appropriate index or data structure can improve search performance.
+
+Searching and Indexing
+
+An index stores information that helps locate data efficiently.
+
+For example, a search engine can maintain an index that maps a word to the documents containing that word.
+
+A conceptual inverted index may look like:
+
+binary -> [D2, D5, D8]
+search -> [D1, D2, D5, D8]
+array -> [D1, D4]
+
+The index avoids scanning every document for every query.
+
+Hash-Based Searching
+
+A hash table can be used to map a search term to associated information.
+
+A hash function converts a key into a position or bucket in a hash table.
+
+For a search engine, a word can be used as a key and the associated value can contain a collection of document identifiers.
+
+Average-case lookup in a well-designed hash table can be close to O(1), although collisions can affect performance.
+
+Search Complexity
+
+Different searching algorithms have different time complexities.
+
+Linear search has O(n) worst-case time complexity.
+
+Binary search has O(log n) worst-case time complexity on sorted data.
+
+Fibonacci search also provides logarithmic search behavior.
+
+The choice of algorithm should depend on the structure of the data and the required operations.
+
+Search Engine Example
+
+Consider a collection containing the following documents:
+
+D1 -> Arrays
+D2 -> Searching Algorithms
+D3 -> Sorting Algorithms
+D4 -> Linked Lists
+
+If a user searches for:
+
+binary search
+
+the search engine can use an inverted index to identify documents containing the relevant terms.
+
+The matching documents can then be scored and ranked before displaying the best results.
+
+Searching in a Mini Search Engine
+
+A mini search engine can use several searching techniques together.
+
+The inverted index can quickly identify candidate documents.
+
+The query can then be processed to determine relevance.
+
+A ranking algorithm can assign scores to candidate documents.
+
+A heap or priority queue can be used to retrieve the top K results.
+
+This combination demonstrates how different data structures and algorithms can work together to solve a larger problem.
+
+Searching Algorithms in Data Structures
+
+Searching is a fundamental part of data structures and algorithms.
+
+Understanding sequential search, sentinel search, binary search, Fibonacci search, and indexed sequential search provides a foundation for designing efficient systems that need to locate information quickly.
