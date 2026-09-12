@@ -1,0 +1,216 @@
+Trees and Tree Data Structures
+
+A tree is a non-linear data structure used to represent hierarchical relationships between elements.
+
+A tree consists of nodes connected by edges. The topmost node is called the root. Nodes that are connected below another node are called its children.
+
+A node can have zero or more children. A node with no children is called a leaf node.
+
+Basic Tree Terminology
+
+The root is the starting node of a tree.
+
+A parent is a node that has one or more children.
+
+A child is a node directly connected below a parent.
+
+A leaf node is a node that has no children.
+
+An edge is a connection between two nodes.
+
+The depth of a node represents its distance from the root.
+
+The height of a tree represents the length of the longest path from the root to a leaf, depending on the height convention being used.
+
+Binary Tree
+
+A binary tree is a tree in which each node has at most two children.
+
+The two children are commonly called the left child and the right child.
+
+A binary tree can be represented as:
+
+        10
+       /  \
+      5    20
+     / \     \
+    2   7     30
+
+Binary Tree Traversals
+
+Tree traversal is the process of visiting the nodes of a tree in a particular order.
+
+The major depth-first traversal methods are preorder, inorder, and postorder.
+
+Preorder traversal visits the root first, followed by the left subtree and then the right subtree.
+
+Inorder traversal visits the left subtree, followed by the root, and then the right subtree.
+
+Postorder traversal visits the left subtree, followed by the right subtree, and then the root.
+
+For the example tree, the traversals are:
+
+Preorder:
+10 5 2 7 20 30
+
+Inorder:
+2 5 7 10 20 30
+
+Postorder:
+2 7 5 30 20 10
+
+Level Order Traversal
+
+Level order traversal visits nodes level by level from the root.
+
+A queue is commonly used to implement level order traversal.
+
+For the example tree, level order traversal is:
+
+10 5 20 2 7 30
+
+Binary Search Tree
+
+A binary search tree, or BST, is a binary tree that maintains an ordering property.
+
+For each node, values in the left subtree are smaller than the node's value and values in the right subtree are larger, assuming distinct keys and the standard BST rule.
+
+For example:
+
+        50
+       /  \
+      30   70
+     / \   / \
+    20 40 60 80
+
+Searching in a Binary Search Tree
+
+To search for a value in a binary search tree, the target is compared with the current node.
+
+If the target equals the current node, the search is successful.
+
+If the target is smaller, the search continues in the left subtree.
+
+If the target is larger, the search continues in the right subtree.
+
+The efficiency of BST searching depends on the height of the tree.
+
+In a balanced binary search tree, searching can take O(log n) time.
+
+In the worst case, an unbalanced binary search tree can behave like a linked list and searching can take O(n) time.
+
+Insertion in a Binary Search Tree
+
+To insert a new value into a binary search tree, the value is compared with nodes while moving left or right until an appropriate empty position is found.
+
+The time complexity depends on the height of the tree.
+
+Deletion in a Binary Search Tree
+
+Deleting a node from a binary search tree requires maintaining the BST ordering property.
+
+A node may have no children, one child, or two children.
+
+The deletion procedure depends on the number of children of the node.
+
+Balanced Trees
+
+A balanced tree attempts to keep its height relatively small.
+
+Keeping the height small can improve operations such as searching, insertion, and deletion.
+
+Balanced trees are useful when predictable logarithmic performance is required.
+
+Heap
+
+A heap is a specialized tree-based data structure commonly represented using an array.
+
+A binary heap is a complete binary tree.
+
+In a min-heap, the smallest element is stored at the root.
+
+In a max-heap, the largest element is stored at the root.
+
+For a max-heap:
+
+        90
+       /  \
+      70   80
+     / \
+    40 50
+
+The parent of every node has a value greater than or equal to the values of its children.
+
+Heap Operations
+
+Important heap operations include insertion, deletion of the root, and heap construction.
+
+Insertion adds a new element and restores the heap property.
+
+Removing the root replaces it with another element and restores the heap property using an appropriate adjustment operation.
+
+Heap operations are important in priority queues.
+
+Priority Queue and Heap
+
+A priority queue processes elements according to their priority.
+
+A heap provides an efficient way to implement a priority queue.
+
+A max-heap can be used when the highest-priority element should be processed first.
+
+A min-heap can be used when the lowest-priority element should be processed first.
+
+Heap in a Search Engine
+
+A search engine can use a heap to retrieve the Top-K most relevant documents.
+
+Suppose the search engine has calculated the following relevance scores:
+
+D1 -> 5.2
+D2 -> 9.4
+D3 -> 7.1
+D4 -> 8.6
+D5 -> 6.3
+
+If only the top three documents are required, a heap can help maintain the best candidates without requiring a complete sorting operation on every document.
+
+Trees and Searching
+
+Trees provide useful structures for organizing data to support efficient searching.
+
+Binary search trees use ordering to eliminate portions of the search space.
+
+Heaps organize elements according to priority.
+
+Tries are another important tree-based structure used for prefix searching.
+
+Trie
+
+A Trie is a tree-based data structure used to store strings.
+
+Each path from the root can represent characters in a word.
+
+For example, words such as:
+
+cat
+car
+care
+
+can share common prefixes in the Trie.
+
+Tries are particularly useful for autocomplete and prefix-based searching.
+
+If the user enters:
+
+car
+
+the Trie can efficiently identify words beginning with that prefix.
+
+Trees in Data Structures
+
+Trees are fundamental non-linear data structures.
+
+They are used in searching, sorting, priority queues, indexing, hierarchical data representation, and many other computer science applications.
+
+Understanding trees provides a foundation for binary search trees, heaps, Tries, tree traversal algorithms, and other advanced data structures.
