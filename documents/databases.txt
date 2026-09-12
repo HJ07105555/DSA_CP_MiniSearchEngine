@@ -1,0 +1,169 @@
+Databases and Database Systems
+
+A database is an organized collection of data that can be stored, managed, retrieved, and updated efficiently.
+
+A Database Management System, commonly called a DBMS, is software used to manage databases and provide controlled access to stored data.
+
+Database systems are used in applications such as banking, education, healthcare, e-commerce, inventory management, and information systems.
+
+Data and Information
+
+Data consists of raw facts and values.
+
+Information is processed or organized data that provides meaning and can be useful for decision making.
+
+A database stores related data in an organized form so that it can be accessed and managed efficiently.
+
+Database Models
+
+A database model describes how data is organized and how relationships between data items are represented.
+
+Common database models include hierarchical, network, relational, object-oriented, and other specialized models.
+
+Relational Database
+
+A relational database organizes data into tables.
+
+A table consists of rows and columns.
+
+A row represents a record or tuple.
+
+A column represents an attribute or field.
+
+For example, a student table may contain:
+
+Student_ID
+Name
+Department
+Semester
+
+Each row represents information about one student.
+
+Primary Key
+
+A primary key is an attribute or set of attributes that uniquely identifies a record in a table.
+
+For example, Student_ID can be used as the primary key of a student table if every student has a unique identifier.
+
+A primary key should uniquely identify each record.
+
+Foreign Key
+
+A foreign key is an attribute that refers to a key in another table.
+
+Foreign keys are used to establish relationships between tables.
+
+For example, a course enrollment table can contain Student_ID as a foreign key that refers to the Student_ID in the student table.
+
+SQL
+
+Structured Query Language, commonly called SQL, is used to interact with relational databases.
+
+SQL can be used to create tables, insert records, retrieve data, update records, and delete records.
+
+Common SQL operations include:
+
+SELECT
+INSERT
+UPDATE
+DELETE
+
+The SELECT statement is commonly used to retrieve data from a database.
+
+Database Queries
+
+A database query specifies the information that needs to be retrieved or manipulated.
+
+For example, a query may request all students belonging to a particular department.
+
+A DBMS processes the query and retrieves the required records.
+
+Indexing in Databases
+
+An index is a data structure used to improve the speed of data retrieval.
+
+Instead of examining every record in a table, an index can help locate relevant records more efficiently.
+
+Database indexes can be implemented using specialized data structures such as B-trees and B+ trees.
+
+Indexing involves a trade-off between faster retrieval and additional storage and maintenance costs.
+
+Searching and Indexing
+
+Searching and indexing are closely related concepts.
+
+Without an index, a system may need to examine many records to find matching information.
+
+With an appropriate index, the system can reduce the amount of data that must be examined.
+
+This idea is also important in search engines.
+
+A search engine can maintain an inverted index that maps terms to the documents containing those terms.
+
+Database Transactions
+
+A transaction is a sequence of database operations that is treated as a logical unit of work.
+
+For example, transferring money between two bank accounts may involve multiple operations that should be treated as one transaction.
+
+Transactions help maintain consistency when data is modified.
+
+ACID Properties
+
+Database transactions are commonly associated with four ACID properties.
+
+Atomicity means that a transaction is treated as an all-or-nothing operation.
+
+Consistency means that a transaction should move the database from one valid state to another valid state.
+
+Isolation controls how concurrent transactions interact with one another.
+
+Durability means that committed changes should persist even after a failure.
+
+Normalization
+
+Normalization is a database design technique used to reduce unnecessary data redundancy and improve data organization.
+
+Normalization can divide data into related tables and establish relationships between them.
+
+Common normal forms include First Normal Form, Second Normal Form, and Third Normal Form.
+
+Database Management
+
+A DBMS provides mechanisms for storing, retrieving, updating, securing, and managing data.
+
+It can also provide facilities for concurrency control, transaction management, recovery, and access control.
+
+Databases and Data Structures
+
+Data structures are important in the implementation of database systems.
+
+Indexes require appropriate data structures to support efficient searching and retrieval.
+
+Trees such as B-trees and B+ trees are commonly associated with database indexing.
+
+Hash-based structures can also be useful for certain types of exact-match lookup.
+
+Databases and the Mini Search Engine
+
+The mini search engine in this project is not a database system.
+
+The project uses local text files as its document corpus rather than a relational database.
+
+However, the concept of indexing is shared between database systems and search engines.
+
+The search engine maintains an inverted index that maps words to documents.
+
+For example:
+
+database -> [D1, D4]
+index -> [D2, D4, D7]
+search -> [D1, D2, D5]
+
+This allows the search engine to locate candidate documents without scanning every document for every query.
+
+Database Systems in Computer Science
+
+Database systems provide an important foundation for storing and managing large collections of structured information.
+
+Understanding tables, keys, queries, transactions, normalization, and indexing provides a foundation for designing systems that store and retrieve information efficiently.
