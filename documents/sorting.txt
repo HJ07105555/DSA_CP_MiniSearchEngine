@@ -1,0 +1,198 @@
+Sorting Algorithms
+
+Sorting is the process of arranging a collection of elements according to a specified order.
+
+The elements may be arranged in ascending order, descending order, alphabetical order, or according to another comparison rule.
+
+Sorting is an important operation in data structures because many searching and processing techniques become easier when data is ordered.
+
+Internal and External Sorting
+
+Internal sorting is performed when the complete collection of data can fit into the main memory of the computer.
+
+External sorting is used when the amount of data is too large to fit into main memory. In external sorting, data is stored in secondary storage and processed in parts.
+
+Sorting Efficiency
+
+Sorting algorithms can be compared using several factors.
+
+Important factors include:
+
+Time complexity
+Space complexity
+Number of comparisons
+Number of swaps
+Number of passes
+Stability
+Memory usage
+
+The efficiency of a sorting algorithm depends on the characteristics of the input data and the requirements of the application.
+
+Stable Sorting
+
+A stable sorting algorithm preserves the relative order of records having equal keys.
+
+Stability is useful when records contain multiple fields and sorting is performed using more than one key.
+
+Bubble Sort
+
+Bubble sort is a simple comparison-based sorting algorithm.
+
+It repeatedly compares adjacent elements and swaps them when they are in the wrong order.
+
+For example, the elements:
+
+5 3 8 2
+
+can be rearranged by repeatedly comparing neighboring elements.
+
+After each pass, one or more elements move toward their correct positions.
+
+The worst-case time complexity of bubble sort is O(n^2).
+
+With an appropriate optimization, bubble sort can detect when no swaps occur during a pass and terminate early.
+
+Insertion Sort
+
+Insertion sort builds the sorted portion of a collection one element at a time.
+
+Each new element is compared with elements in the already sorted portion and inserted into its correct position.
+
+Insertion sort is useful for small collections or data that is already nearly sorted.
+
+The worst-case time complexity of insertion sort is O(n^2).
+
+Insertion sort is stable when implemented using comparisons that preserve the order of equal elements.
+
+Selection Sort
+
+Selection sort repeatedly finds the smallest element from the unsorted portion and places it at the correct position.
+
+After each pass, one additional element is placed in its final position.
+
+The basic selection sort algorithm has O(n^2) time complexity.
+
+Selection sort generally performs fewer swaps than bubble sort, although it still requires many comparisons.
+
+Quick Sort
+
+Quick sort is a divide and conquer sorting algorithm.
+
+It selects an element as a pivot and partitions the collection into sections based on the pivot.
+
+Elements smaller than the pivot can be placed on one side and elements larger than the pivot on the other side.
+
+The algorithm then recursively sorts the resulting sections.
+
+The average time complexity of quick sort is O(n log n).
+
+The worst-case time complexity can become O(n^2), depending on the pivot choices and the input arrangement.
+
+The choice of pivot can have a significant effect on quick sort performance.
+
+Shell Sort
+
+Shell sort is an extension of insertion sort.
+
+Instead of comparing only adjacent elements, shell sort compares elements separated by a gap.
+
+The gap is gradually reduced until the final pass uses a gap of one.
+
+Shell sort can perform better than simple quadratic sorting algorithms for many input arrangements.
+
+Its exact time complexity depends on the gap sequence used.
+
+Radix Sort
+
+Radix sort is a non-comparison-based sorting algorithm.
+
+It processes numbers or strings according to individual digits or characters.
+
+For example, integers can be sorted starting from the least significant digit and progressing toward the most significant digit.
+
+Radix sort can be efficient when the number of digits and the range of values are suitable for the algorithm.
+
+Counting Sort
+
+Counting sort is a non-comparison-based sorting algorithm.
+
+It counts how many times each value occurs and uses those counts to determine the positions of the elements in the sorted output.
+
+Counting sort is effective when the range of possible values is not excessively large compared with the number of elements.
+
+The time complexity can be expressed as O(n + k), where n is the number of elements and k is the range of values.
+
+Bucket Sort
+
+Bucket sort distributes elements into a number of buckets.
+
+Each bucket contains a range or category of values.
+
+The elements within the buckets are then processed and combined to produce the final sorted collection.
+
+Bucket sort can be effective when the input values are distributed appropriately across the buckets.
+
+Comparison-Based Sorting
+
+Bubble sort, insertion sort, selection sort, quick sort, and shell sort are examples of comparison-based sorting methods.
+
+These algorithms determine the order of elements by comparing their values.
+
+Non-Comparison Sorting
+
+Counting sort and radix sort do not rely entirely on direct comparisons between elements.
+
+They use information about the values or representation of the elements to determine their ordering.
+
+Sorting and Searching
+
+Sorting is closely related to searching.
+
+Binary search requires ordered data.
+
+Therefore, sorting a collection can be useful when many searches need to be performed on the same data.
+
+For example, a collection of numbers can be sorted once and then searched repeatedly using binary search.
+
+Sorting in a Search Engine
+
+A search engine may need to rank documents according to their relevance scores.
+
+For example:
+
+Document A -> 8.5
+Document B -> 6.2
+Document C -> 9.1
+Document D -> 4.8
+
+The documents can be ordered according to their scores so that the most relevant results appear first.
+
+For retrieving only a small number of the best results, a heap or priority queue can be more appropriate than sorting every candidate result.
+
+Sorting and Data Structures
+
+Sorting algorithms demonstrate important algorithmic concepts such as comparison, divide and conquer, recursion, partitioning, counting, and distribution.
+
+Understanding sorting is important for designing efficient data-processing and searching systems.
+
+Algorithm Comparison
+
+Different sorting algorithms are suitable for different situations.
+
+Bubble sort is simple but inefficient for large unsorted collections.
+
+Insertion sort is useful for small or nearly sorted collections.
+
+Selection sort is simple and performs a predictable number of comparisons.
+
+Quick sort is often efficient in practice and uses the divide and conquer approach.
+
+Shell sort improves upon insertion sort by comparing elements at different gaps.
+
+Counting sort can be efficient when the range of values is limited.
+
+Radix sort can be useful for integers or strings with suitable representations.
+
+Bucket sort can be effective when input values are distributed appropriately.
+
+The choice of sorting algorithm should depend on the input data, memory constraints, required stability, and expected performance.
