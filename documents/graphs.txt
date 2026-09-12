@@ -1,0 +1,188 @@
+Graphs and Graph Data Structures
+
+A graph is a non-linear data structure used to represent relationships or connections between objects.
+
+A graph consists of a collection of vertices and edges.
+
+Vertices represent objects or entities, while edges represent relationships or connections between those vertices.
+
+For example, a graph representing cities and roads can use cities as vertices and roads as edges.
+
+Basic Graph Terminology
+
+A vertex is a node in a graph.
+
+An edge represents a connection between two vertices.
+
+The degree of a vertex is the number of edges connected to that vertex in an undirected graph.
+
+A path is a sequence of vertices connected by edges.
+
+A cycle is a path that starts and ends at the same vertex.
+
+A connected graph contains a path between every pair of vertices in an undirected graph.
+
+Directed and Undirected Graphs
+
+In an undirected graph, an edge does not have a specific direction.
+
+For example:
+
+A -- B
+
+means that A is connected to B and B is connected to A.
+
+In a directed graph, edges have a direction.
+
+For example:
+
+A -> B
+
+means that the edge goes from A to B.
+
+Weighted Graphs
+
+A weighted graph assigns a value or weight to each edge.
+
+The weight may represent distance, cost, time, or another quantity.
+
+For example:
+
+A --5-- B
+
+indicates that the edge between A and B has weight 5.
+
+Graph Representation
+
+Graphs can be represented using several data structures.
+
+Common representations include adjacency matrices and adjacency lists.
+
+Adjacency Matrix
+
+An adjacency matrix uses a two-dimensional array to represent connections between vertices.
+
+If there is an edge between two vertices, the corresponding matrix position can store a value indicating the connection.
+
+An adjacency matrix provides direct access to whether two vertices are connected.
+
+However, it requires O(V^2) space for a graph with V vertices.
+
+Adjacency List
+
+An adjacency list stores a list of neighboring vertices for each vertex.
+
+For example:
+
+A -> B, C
+B -> A, D
+C -> A
+D -> B
+
+Adjacency lists are often more space-efficient for sparse graphs because they store only existing edges.
+
+Graph Traversal
+
+Graph traversal is the process of visiting vertices of a graph systematically.
+
+Two fundamental graph traversal algorithms are Breadth-First Search and Depth-First Search.
+
+Breadth-First Search
+
+Breadth-First Search, commonly called BFS, explores vertices level by level.
+
+BFS uses a queue to keep track of vertices that need to be processed.
+
+A starting vertex is placed into the queue.
+
+The algorithm removes a vertex from the front of the queue, visits its unvisited neighbors, and adds those neighbors to the queue.
+
+This process continues until the queue becomes empty.
+
+BFS can be used to find the shortest path in an unweighted graph in terms of the number of edges.
+
+The time complexity of BFS using an adjacency list is O(V + E), where V is the number of vertices and E is the number of edges.
+
+Depth-First Search
+
+Depth-First Search, commonly called DFS, explores as far as possible along one path before backtracking.
+
+DFS can be implemented using recursion or an explicit stack.
+
+When a vertex is visited, the algorithm explores an unvisited neighboring vertex and continues until it reaches a point where no unvisited neighbor is available.
+
+The algorithm then backtracks to an earlier vertex.
+
+The time complexity of DFS using an adjacency list is O(V + E).
+
+BFS and Queues
+
+BFS demonstrates an important relationship between algorithms and data structures.
+
+The queue ensures that vertices are processed in the order in which they are discovered.
+
+This produces the level-by-level behavior of BFS.
+
+DFS and Stacks
+
+DFS can use a stack to store vertices that still need to be explored.
+
+The stack follows the Last In First Out principle.
+
+Recursive DFS also uses the function call stack internally.
+
+Graph Searching
+
+Searching in a graph involves determining whether a vertex or path satisfying a particular condition exists.
+
+BFS and DFS are fundamental graph searching algorithms.
+
+The appropriate algorithm depends on the structure of the graph and the required result.
+
+Graph Applications
+
+Graphs are used to represent many types of relationships.
+
+Common applications include:
+
+Computer networks
+Road networks
+Social networks
+Transportation systems
+Web page relationships
+Dependency systems
+Communication networks
+Maps
+Recommendation systems
+
+Graphs and Search Engines
+
+A search engine can conceptually represent relationships between documents using a graph.
+
+For example, documents can be represented as vertices, while links or relationships between documents can be represented as edges.
+
+Graph algorithms can then be used to analyze relationships between documents.
+
+Although this mini search engine focuses primarily on indexing and searching, graph concepts provide another example of how data structures can represent relationships between entities.
+
+Shortest Path
+
+The shortest path problem involves finding a path between vertices with minimum distance or cost.
+
+For unweighted graphs, BFS can be used to find a shortest path in terms of the number of edges.
+
+For weighted graphs, specialized algorithms can be used depending on the properties of the edge weights.
+
+Graph Algorithms and Complexity
+
+The efficiency of graph algorithms depends on the number of vertices, the number of edges, and the chosen graph representation.
+
+Using an adjacency list, BFS and DFS generally have O(V + E) time complexity.
+
+Using an adjacency matrix may result in different traversal costs because checking neighboring vertices involves examining matrix entries.
+
+Graphs in Data Structures
+
+Graphs are fundamental non-linear data structures used to represent relationships and networks.
+
+Understanding graph representations, BFS, DFS, queues, stacks, paths, cycles, and weighted graphs provides a foundation for many real-world algorithms and computer science applications.
