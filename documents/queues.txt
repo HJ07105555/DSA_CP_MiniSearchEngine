@@ -1,0 +1,163 @@
+Queues and Queue Data Structures
+
+A queue is a linear data structure in which insertion and deletion are performed at different ends.
+
+A queue follows the First In First Out principle, commonly abbreviated as FIFO. This means that the element inserted first is the first element to be removed.
+
+For example, if the elements are inserted in the following order:
+
+10 -> 20 -> 30 -> 40
+
+Then 10 will be removed first, followed by 20, 30, and 40.
+
+Basic Queue Operations
+
+The main operations performed on a queue are enqueue, dequeue, front, rear, and isEmpty.
+
+Enqueue adds a new element at the rear of the queue.
+
+Dequeue removes an element from the front of the queue.
+
+Front returns the element at the front without removing it.
+
+Rear returns the element at the rear without removing it.
+
+isEmpty checks whether the queue contains any elements.
+
+A properly implemented queue can perform enqueue and dequeue operations in O(1) time.
+
+Array Implementation of Queue
+
+A queue can be implemented using an array.
+
+Two indexes or pointers can be used to keep track of the front and rear positions.
+
+During an enqueue operation, a new element is added at the rear.
+
+During a dequeue operation, the element at the front is removed and the front position is advanced.
+
+A simple linear array implementation can lead to unused spaces after several dequeue operations.
+
+Circular Queue
+
+A circular queue solves the problem of unused spaces in a simple array-based queue.
+
+In a circular queue, the last position of the array is logically connected to the first position.
+
+When the rear reaches the end of the array, it can move back to the beginning if space is available.
+
+The next position can be calculated using a modulo operation.
+
+Circular queues make better use of the available array space.
+
+Queue Overflow and Underflow
+
+Queue overflow occurs when an attempt is made to insert an element into a full fixed-size queue.
+
+Queue underflow occurs when an attempt is made to remove an element from an empty queue.
+
+Linked Queue
+
+A queue can also be implemented using a linked list.
+
+The front pointer identifies the first node and the rear pointer identifies the last node.
+
+New nodes can be added at the rear and removed from the front.
+
+Using both front and rear pointers allows enqueue and dequeue operations to be performed efficiently.
+
+Priority Queue
+
+A priority queue is a special type of queue in which elements are processed according to their priority rather than only according to their arrival order.
+
+An element with a higher priority may be removed before an element with a lower priority.
+
+Priority queues can be implemented using different data structures, including arrays, linked lists, and heaps.
+
+Ascending Priority Queue
+
+In an ascending priority queue, elements with smaller priority values are processed before elements with larger priority values, depending on the priority convention being used.
+
+For example:
+
+1 -> 2 -> 3 -> 4
+
+can represent increasing priority values.
+
+Descending Priority Queue
+
+In a descending priority queue, elements with larger priority values are processed before elements with smaller priority values.
+
+For example:
+
+4 -> 3 -> 2 -> 1
+
+can represent decreasing priority values.
+
+Deque
+
+A deque, or double-ended queue, is a data structure in which insertion and deletion can be performed at both ends.
+
+A deque supports operations such as insertion at the front, insertion at the rear, deletion from the front, and deletion from the rear.
+
+A deque provides more flexibility than a standard queue.
+
+Multiple Queues
+
+Multiple queues can be maintained within the same system or memory structure.
+
+Different queues may represent different categories of data or different processing priorities.
+
+Queue Applications
+
+Queues are widely used in computer science.
+
+Common applications include:
+
+CPU scheduling
+Printer scheduling
+Process management
+Network packet handling
+Breadth-first search
+Task scheduling
+Simulation systems
+Customer service systems
+Operating system resource management
+
+Queues in Graph Algorithms
+
+Queues are important in breadth-first search.
+
+In breadth-first search, vertices are explored level by level.
+
+A vertex is added to a queue when it is discovered, and vertices are processed from the front of the queue.
+
+This allows the algorithm to visit vertices in the required order.
+
+Queue and Search Systems
+
+A queue can also be useful when processing search-related tasks.
+
+For example, documents or queries waiting to be processed can be placed into a queue.
+
+However, when search results must be ranked according to relevance, a priority queue or heap is more appropriate than a simple FIFO queue.
+
+Advantages of Queues
+
+Queues provide an organized method for processing elements in arrival order.
+
+They are useful for scheduling, buffering, simulations, and algorithms such as breadth-first search.
+
+Limitations of Queues
+
+A simple fixed-size array implementation has limited capacity.
+
+A linear queue may waste available space unless a circular implementation is used.
+
+A standard queue also does not automatically provide priority-based processing.
+
+Queues in Data Structures
+
+Queues are fundamental data structures based on the FIFO principle.
+
+Understanding queues provides a foundation for circular queues, linked queues, deques, priority queues, scheduling algorithms, and graph traversal algorithms.
